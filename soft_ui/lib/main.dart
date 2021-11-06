@@ -11,13 +11,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Soft UI Template',
       theme: ThemeData(
         // This is the theme of your application.
-
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.grey[300],
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.grey[300],
+          foregroundColor: Color.fromARGB(255, 73, 73, 73),
+          shadowColor: Color.fromARGB(255, 219, 219, 219),
+          elevation: 18,
+          centerTitle: true,
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Soft UI Template'),
     );
   }
 }
@@ -35,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
       appBar: AppBar(
         title: Text(widget.title),
       ),
@@ -46,7 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: 135,
               height: 135,
-              child: const Icon(Icons.android, size: 60),
+              child: const Icon(
+                Icons.android,
+                size: 60,
+                color: Color.fromARGB(255, 150, 150, 150),
+              ),
               decoration: BoxDecoration(
                 color: Colors.grey[300],
                 borderRadius: const BorderRadius.all(Radius.circular(40)),
@@ -71,7 +81,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               width: 135,
               height: 135,
-              child: const Icon(Icons.android, size: 60),
+              child: const Icon(
+                Icons.android,
+                size: 60,
+                color: Color.fromARGB(255, 150, 150, 150),
+              ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Colors.grey[300],
@@ -103,6 +117,50 @@ class _MyHomePageState extends State<MyHomePage> {
                     0.3,
                     0.8,
                     0.98,
+                  ],
+                ),
+              ),
+            ), // second button
+            const SizedBox(height: 50),
+            Container(
+              width: 135,
+              height: 135,
+              child: const Icon(
+                Icons.android,
+                size: 60,
+                color: Color.fromARGB(255, 90, 90, 90),
+              ),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey[300],
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.white,
+                    offset: Offset(4, 4),
+                    blurRadius: 15.0,
+                    spreadRadius: 1.0,
+                  ),
+                  BoxShadow(
+                    color: Color.fromARGB(255, 117, 117, 117), //grey[600]
+                    offset: Offset(-4, -4),
+                    blurRadius: 15.0,
+                    spreadRadius: 1.0,
+                  )
+                ],
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.grey.shade600,
+                    Colors.grey.shade500,
+                    Colors.grey.shade400,
+                    Colors.grey.shade200,
+                  ],
+                  stops: const [
+                    0,
+                    0.3,
+                    0.6,
+                    1,
                   ],
                 ),
               ),
