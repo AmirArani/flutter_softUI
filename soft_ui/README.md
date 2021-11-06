@@ -1,4 +1,4 @@
-# soft_ui
+# Soft UI / Flutter
 
 Simple Implementation of Neumorphism (aka neomorphism aka Soft UI) designs in Flutter.
 Notice that these designs are beautiful BUT they have lots of problems for real products. so use them carefully.
